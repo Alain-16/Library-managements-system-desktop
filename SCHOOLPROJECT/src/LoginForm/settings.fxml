@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginForm.settingsController">
+    <children>
+        <AnchorPane fx:id="anchor" prefHeight="809.0" prefWidth="815.0">
+            <children>
+                <Label layoutX="59.0" layoutY="81.0" prefHeight="34.0" prefWidth="221.0" text="Change Password">
+                    <font>
+                        <Font name="DejaVu Sans Bold" size="22.0" />
+                    </font>
+                </Label>
+                <Button fx:id="SaveButton" layoutX="103.0" layoutY="314.0" mnemonicParsing="false" onAction="#Go_Saved" prefHeight="41.0" prefWidth="98.0" styleClass="my_button4" text="Save">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="usernameField" layoutX="35.0" layoutY="162.0" prefHeight="26.0" prefWidth="233.0" promptText="username" />
+                <PasswordField fx:id="passwordField" layoutX="35.0" layoutY="233.0" prefHeight="26.0" prefWidth="233.0" promptText="new password" />
+                <Label layoutX="343.0" layoutY="14.0" prefHeight="59.0" prefWidth="359.0" text="Profile Details">
+                    <font>
+                        <Font name="DejaVu Sans Bold" size="26.0" />
+                    </font>
+                </Label>
+                <Label layoutX="336.0" layoutY="86.0" prefHeight="59.0" prefWidth="434.0" text="Name:">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="16.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="nameField" layoutX="398.0" layoutY="103.0" prefHeight="26.0" prefWidth="292.0" promptText="name" styleClass="text_field" />
+                <VBox fx:id="layer" layoutY="-3.0" prefHeight="552.0" prefWidth="324.0" style="-fx-background-color: #030613;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <ImageView fx:id="myImage" fitHeight="111.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true">
+                            <VBox.margin>
+                                <Insets left="77.0" top="20.0" />
+                            </VBox.margin>
+                            <image>
+                                <Image url="@../images/profile.png" />
+                            </image>
+                        </ImageView>
+                        <Label prefHeight="32.0" prefWidth="112.0" text="Admin" textFill="WHITE">
+                            <VBox.margin>
+                                <Insets left="77.0" top="30.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="DejaVu Sans Bold" size="27.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="EditButton" mnemonicParsing="false" onAction="#Go_Edit" prefHeight="40.0" prefWidth="116.0" style="-fx-background-color: #160613;" text="Edit Profile" textFill="WHITE">
+                            <VBox.margin>
+                                <Insets left="77.0" top="30.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                </VBox>
+                <Label layoutX="336.0" layoutY="146.0" prefHeight="59.0" prefWidth="434.0" text="username:">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="16.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="userField" layoutX="427.0" layoutY="162.0" prefHeight="26.0" prefWidth="292.0" promptText="username" styleClass="text_field" />
+                <Label layoutX="336.0" layoutY="204.0" prefHeight="59.0" prefWidth="434.0" text="Password:">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="16.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="passField" layoutX="427.0" layoutY="221.0" prefHeight="26.0" prefWidth="267.0" promptText="your password" styleClass="passwordfield" />
+                <Label layoutX="336.0" layoutY="263.0" prefHeight="59.0" prefWidth="434.0" text="Contact Details">
+                    <font>
+                        <Font name="DejaVu Sans Bold" size="26.0" />
+                    </font>
+                </Label>
+                <Label layoutX="336.0" layoutY="326.0" prefHeight="59.0" prefWidth="434.0" text="email:">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="16.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="emailField" layoutX="407.0" layoutY="342.0" prefHeight="26.0" prefWidth="292.0" promptText="email" styleClass="text_field" />
+                <Label layoutX="336.0" layoutY="378.0" prefHeight="59.0" prefWidth="434.0" text="Phone:">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="16.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="Phonefield" layoutX="415.0" layoutY="395.0" prefHeight="26.0" prefWidth="292.0" promptText="Tel:" styleClass="text_field" />
+                <Button fx:id="profile_button" layoutX="573.0" layoutY="448.0" mnemonicParsing="false" onAction="#Go_Profile" prefHeight="40.0" prefWidth="98.0" styleClass="button5" text="Save">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <AnchorPane fx:id="layer2" layoutX="321.0" prefHeight="545.0" prefWidth="499.0" style="-fx-background-color: #030613;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label layoutX="30.0" layoutY="14.0" prefHeight="71.0" prefWidth="434.0" text="Settings" textFill="WHITE">
+                            <font>
+                                <Font name="DejaVu Sans Bold" size="28.0" />
+                            </font>
+                            <padding>
+                                <Insets left="70.0" />
+                            </padding>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="147.0" prefHeight="111.0" prefWidth="434.0" text="Privacy Policy" textFill="WHITE">
+                            <font>
+                                <Font name="DejaVu Sans Bold" size="28.0" />
+                            </font>
+                            <padding>
+                                <Insets bottom="45.0" left="30.0" />
+                            </padding>
+                        </Label>
+                        <Hyperlink fx:id="link" layoutX="55.0" layoutY="203.0" onAction="#Go_change" prefHeight="26.0" prefWidth="212.0" text="Change password ?" />
+                        <Hyperlink fx:id="ProfileLink" layoutX="55.0" layoutY="223.0" onAction="#Go_to_Profile" prefHeight="26.0" prefWidth="212.0" text="View profile detail" />
+                        <Label layoutX="23.0" layoutY="312.0" prefHeight="111.0" prefWidth="434.0" text="Documentation" textFill="WHITE">
+                            <font>
+                                <Font name="DejaVu Sans Bold" size="28.0" />
+                            </font>
+                            <padding>
+                                <Insets bottom="45.0" left="30.0" />
+                            </padding>
+                        </Label>
+                        <Hyperlink fx:id="DocLink" layoutX="55.0" layoutY="368.0" onAction="#Go_Documentation" prefHeight="26.0" prefWidth="212.0" text="View documentation" />
+                  <Label layoutX="448.0" layoutY="14.0">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-forward-47.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

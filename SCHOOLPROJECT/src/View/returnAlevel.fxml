@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.returnAlevelController">
+    <children>
+        <AnchorPane fx:id="myanchor" prefHeight="560.0" prefWidth="737.0">
+            <children>
+                <Separator layoutX="406.0" orientation="VERTICAL" prefHeight="620.0" prefWidth="0.0" />
+                <TextField fx:id="student_id_field1" layoutX="424.0" layoutY="310.0" prefHeight="26.0" prefWidth="151.0" promptText="student_ID" />
+                <TextField fx:id="student_name_field2" layoutX="590.0" layoutY="310.0" prefHeight="26.0" prefWidth="214.0" promptText="student name" />
+                <DatePicker fx:id="return_field" layoutX="427.0" layoutY="432.0" prefHeight="26.0" prefWidth="151.0" promptText="return date" />
+                <TextField fx:id="student_class_field2" layoutX="427.0" layoutY="371.0" prefHeight="26.0" prefWidth="136.0" promptText="student_class" />
+                <TextField fx:id="bk_status1" layoutX="631.0" layoutY="189.0" prefHeight="26.0" prefWidth="173.0" promptText="book status" />
+                <TextField fx:id="class_bk1" layoutX="423.0" layoutY="189.0" prefHeight="26.0" prefWidth="144.0" promptText="class" />
+            <TextField fx:id="Depart" layoutX="423.0" layoutY="249.0" prefHeight="26.0" prefWidth="173.0" promptText="Combination" />
+            <TextField fx:id="period1" layoutX="635.0" layoutY="249.0" prefHeight="26.0" prefWidth="144.0" promptText="period" />
+                <TextField fx:id="name_BK1" layoutX="631.0" layoutY="124.0" prefHeight="26.0" prefWidth="173.0" promptText="book name" />
+                <TextField fx:id="number_BK1" layoutX="423.0" layoutY="124.0" onKeyTyped="#pull_function" prefHeight="26.0" prefWidth="144.0" promptText="book number" />
+                <Label layoutX="472.0" layoutY="20.0" prefHeight="38.0" prefWidth="214.0" text="Return Alevel Books" textFill="#160613">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="date_field1" layoutX="629.0" layoutY="371.0" prefHeight="26.0" prefWidth="136.0" promptText="issued date" />
+                <CheckBox fx:id="alevel_check" layoutX="625.0" layoutY="432.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="144.0" text="Available/Returned" />
+                <Label fx:id="errorlabel1" layoutX="436.0" layoutY="481.0" prefHeight="26.0" prefWidth="343.0" style="-fx-background-color: #F0EAEF;" />
+                <Button fx:id="Borrow_button" layoutX="574.0" layoutY="531.0" mnemonicParsing="false" onAction="#submite_inputs" prefHeight="47.0" prefWidth="112.0" style="-fx-background-color: #160613;" text="Return" textFill="WHITE">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Button>
+                <Label layoutX="21.0" layoutY="20.0" prefHeight="38.0" prefWidth="355.0" text="Return Books Borrowed as a class" textFill="#160613">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="number_bk" layoutX="21.0" layoutY="124.0" onKeyTyped="#fetch_function" prefHeight="26.0" prefWidth="144.0" promptText="book number" />
+                <TextField fx:id="name_BK" layoutX="222.0" layoutY="124.0" prefHeight="26.0" prefWidth="173.0" promptText="book name" />
+                <TextField fx:id="bk_status" layoutX="222.0" layoutY="189.0" prefHeight="26.0" prefWidth="173.0" promptText="book status" />
+                <TextField fx:id="class_bk" layoutX="21.0" layoutY="189.0" prefHeight="26.0" prefWidth="144.0" promptText="class" />
+            <TextField fx:id="Depart1" layoutX="21.0" layoutY="249.0" prefHeight="26.0" prefWidth="173.0" promptText="Combination" />
+            <TextField fx:id="period2" layoutX="237.0" layoutY="249.0" prefHeight="26.0" prefWidth="144.0" promptText="period" />
+                <TextField fx:id="student_id_field" layoutX="18.0" layoutY="310.0" prefHeight="26.0" prefWidth="151.0" promptText="student_ID" />
+                <TextField fx:id="student_name_field" layoutX="181.0" layoutY="310.0" prefHeight="26.0" prefWidth="214.0" promptText="student name" />
+                <TextField fx:id="student_class_field" layoutX="18.0" layoutY="368.0" prefHeight="26.0" prefWidth="136.0" promptText="student_class" />
+                <TextField fx:id="issued_field" layoutX="220.0" layoutY="371.0" prefHeight="26.0" prefWidth="136.0" promptText="issued date" />
+                <CheckBox fx:id="classCheck" layoutX="216.0" layoutY="429.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="144.0" text="Available/Returned" />
+                <DatePicker fx:id="date_field" layoutX="21.0" layoutY="429.0" prefHeight="26.0" prefWidth="151.0" promptText="return date" />
+                <Button fx:id="Borrow_class" layoutX="136.0" layoutY="531.0" mnemonicParsing="false" onAction="#Borrow_as_class_function" prefHeight="47.0" prefWidth="112.0" style="-fx-background-color: #160613;" text="Return" textFill="WHITE">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Button>
+                <ComboBox fx:id="role" layoutX="18.0" layoutY="482.0" prefWidth="150.0" promptText="Role" />
+                <VBox fx:id="layer" prefHeight="620.0" prefWidth="406.0" style="-fx-background-color: #160613;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                  <Label onMouseClicked="#slide_back">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-forward-47.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="370.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                        <ImageView fitHeight="115.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/logo1.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets left="30.0" top="20.0" />
+                            </VBox.margin>
+                        </ImageView>
+                        <Separator prefHeight="0.0" prefWidth="406.0">
+                            <padding>
+                                <Insets top="30.0" />
+                            </padding>
+                        </Separator>
+                        <Label fx:id="mylabel" onMouseClicked="#slide_over" prefHeight="44.0" prefWidth="384.0" text="Return Books Borrowed as a class" textFill="#fcfafa">
+                            <VBox.margin>
+                                <Insets top="120.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="System Bold" size="21.0" />
+                            </font>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

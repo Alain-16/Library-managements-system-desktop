@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="students.issue_controller">
+    <children>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="818.0">
+            <children>
+                <Label layoutX="482.0" layoutY="23.0" prefHeight="40.0" prefWidth="255.0" text="Borrow other Books" textFill="#160613">
+                    <font>
+                        <Font name="SansSerif Bold" size="25.0" />
+                    </font>
+                </Label>
+                <Label fx:id="errorlabel" layoutX="466.0" layoutY="477.0" prefHeight="28.0" prefWidth="255.0" style="-fx-background-color: #c2c2c3;" textFill="#c2c2c3bf" />
+                <TextField fx:id="numberBK" layoutX="422.0" layoutY="116.0" onKeyTyped="#pull_up" prefHeight="26.0" prefWidth="131.0" promptText="book number" />
+                <TextField fx:id="nameBK" editable="false" layoutX="583.0" layoutY="116.0" prefHeight="26.0" prefWidth="228.0" promptText="book name" />
+                <TextField fx:id="department_btn" editable="false" layoutX="422.0" layoutY="182.0" prefHeight="26.0" prefWidth="146.0" promptText="Department" />
+                <TextField fx:id="type_btn" editable="false" layoutX="583.0" layoutY="182.0" prefHeight="26.0" prefWidth="228.0" promptText="type" />
+                <TextField fx:id="status_btn" editable="false" layoutX="424.0" layoutY="250.0" prefHeight="26.0" prefWidth="228.0" promptText="book status" />
+                <TextField fx:id="student_ID" layoutX="424.0" layoutY="312.0" onKeyTyped="#pull_up_student" prefHeight="26.0" prefWidth="146.0" promptText="student_ID" />
+                <TextField fx:id="student_name" editable="false" layoutX="583.0" layoutY="312.0" prefHeight="26.0" prefWidth="228.0" promptText="student_name" />
+                <TextField fx:id="student_class" editable="false" layoutX="424.0" layoutY="367.0" prefHeight="26.0" prefWidth="131.0" promptText="student_class" />
+                <CheckBox fx:id="Borrow_check" layoutX="423.0" layoutY="412.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="118.0" text="Borrow/Borrowed" />
+                <Button fx:id="Borrrow_btn" layoutX="517.0" layoutY="533.0" mnemonicParsing="false" onAction="#Borrow_function" prefHeight="49.0" prefWidth="161.0" style="-fx-background-color: #0277BD; -fx-text-fill: white;" text="Borrow" />
+                <CheckBox fx:id="period_btn" layoutX="687.0" layoutY="249.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="131.0" text="3 Days" />
+                <DatePicker fx:id="date_btn" layoutX="589.0" layoutY="366.0" prefHeight="28.0" prefWidth="197.0" promptText="issued date" />
+            <Separator layoutX="402.0" orientation="VERTICAL" prefHeight="624.0" prefWidth="17.0" />
+            <VBox prefHeight="624.0" prefWidth="408.0" style="-fx-background-color: #160613;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="115.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo1.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="60.0" top="50.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="60.0" />
+                     </VBox.margin>
+                  </Separator>
+               </children>
+            </VBox>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

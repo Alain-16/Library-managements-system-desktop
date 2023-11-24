@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MyAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginForm.loginController">
+   <children>
+      <Label layoutX="430.0" layoutY="52.0" prefHeight="47.0" prefWidth="160.0" text="LOGIN">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="36.0" fitWidth="32.0" layoutX="523.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-lock-64.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="nameField" layoutX="419.0" layoutY="177.0" prefHeight="25.0" prefWidth="225.0" promptText="username" />
+      <ImageView fitHeight="14.0" fitWidth="16.0" layoutX="628.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-user-32.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="passwordField" layoutX="419.0" layoutY="254.0" prefHeight="25.0" prefWidth="225.0" promptText="password" />
+      <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="628.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-key-24.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="ErroLabel" layoutX="439.0" layoutY="312.0" prefHeight="25.0" prefWidth="217.0" style="-fx-background-color: #DEDDFF;" />
+      <Hyperlink fx:id="forgotLink" layoutX="457.0" layoutY="359.0" onAction="#Go_On_Forgot" prefHeight="23.0" prefWidth="106.0" text="forgot password" />
+      <Button fx:id="loginButton" layoutX="487.0" layoutY="417.0" mnemonicParsing="false" onAction="#Login_Go" prefHeight="47.0" prefWidth="122.0" style="-fx-background-color: #160613;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <Label layoutX="54.0" layoutY="76.0" prefHeight="47.0" prefWidth="160.0" text="SIGN">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameField" layoutX="28.0" layoutY="165.0" prefHeight="25.0" prefWidth="225.0" promptText="username" />
+      <TextField fx:id="emailField" layoutX="28.0" layoutY="215.0" prefHeight="25.0" prefWidth="225.0" promptText="Email" />
+      <PasswordField fx:id="Password2Field" layoutX="28.0" layoutY="266.0" prefHeight="25.0" prefWidth="225.0" promptText="password" />
+      <Label fx:id="errorlable" layoutX="32.0" layoutY="325.0" prefHeight="25.0" prefWidth="217.0" style="-fx-background-color: #DEDDFF;" />
+      <Button fx:id="Sigin_Button" layoutX="80.0" layoutY="382.0" mnemonicParsing="false" onAction="#Go_To_Sigin" prefHeight="47.0" prefWidth="122.0" style="-fx-background-color: #160613;" text="Sign" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="36.0" fitWidth="32.0" layoutX="125.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-lock-64.png" />
+         </image>
+      </ImageView>
+      <VBox fx:id="layer" prefHeight="600.0" prefWidth="390.0" style="-fx-background-color: #160613;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label onMouseClicked="#Slide_back" prefHeight="27.0" prefWidth="21.0">
+               <VBox.margin>
+                  <Insets left="350.0" top="15.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-forward-47.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <ImageView fitHeight="103.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets left="30.0" top="20.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../images/logo1.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="52.0" prefWidth="367.0" text="Welcome To Book Store" textFill="#fcfcfc">
+               <VBox.margin>
+                  <Insets left="10.0" top="80.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <Button fx:id="SiginButton" mnemonicParsing="false" onAction="#Sigin" prefHeight="66.0" prefWidth="140.0" style="-fx-background-color: #160613;" text="Sign Up" textFill="#b0ffc0">
+               <VBox.margin>
+                  <Insets left="100.0" top="70.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

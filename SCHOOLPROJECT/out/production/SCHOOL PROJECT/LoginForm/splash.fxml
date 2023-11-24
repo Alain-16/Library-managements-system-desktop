@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="640.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginForm.splashController">
+    <children>
+        <AnchorPane fx:id="anchor" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #030100;">
+            <children>
+                <ImageView fitHeight="75.0" fitWidth="97.0" layoutX="178.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/books.png" />
+                    </image>
+                </ImageView>
+                <Separator layoutX="262.0" layoutY="159.0" orientation="VERTICAL" prefHeight="75.0" prefWidth="6.0" />
+                <Label layoutX="277.0" layoutY="176.0" prefHeight="42.0" prefWidth="250.0" text="Book Store" textFill="#73aec9">
+                    <font>
+                        <Font name="SansSerif Bold" size="37.0" />
+                    </font>
+                </Label>
+                <Label fx:id="loadLabel" layoutX="216.0" layoutY="252.0" prefHeight="19.0" prefWidth="279.0" text="Initializing............................" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="38.0" fitWidth="51.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/logo1.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="12.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/gmail.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="415.0" layoutY="401.0" prefHeight="30.0" prefWidth="224.0" text="DEVELOPED By MUGISHA.S.Alain" textFill="#dad8d8" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="12.0" layoutY="340.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-instagram-48.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
